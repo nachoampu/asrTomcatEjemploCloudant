@@ -9,7 +9,7 @@
 <body>
 <h1>Ejemplo de Proyecto de ASR con Cloudant</h1>
 <hr />
-<p>Opciones sobre la base de datos Cloudant de Ignacio Ampuero Gonzalez</p>
+<p>Opciones sobre la base de datos Cloudant de Ignacio Ampuero ahora con DevOps</p>
 <ul>
 <li><a href="listar">Listar</a></li>
 <li><a href="insertar?palabra=hola">Insertar</a></li>
