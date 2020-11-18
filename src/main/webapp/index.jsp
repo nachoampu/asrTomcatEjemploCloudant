@@ -12,7 +12,15 @@
 <p>Opciones sobre la base de datos Cloudant de Ignacio Ampuero</p>
 <ul>
 <li><a href="listar">Listar</a></li>
-<li><a href="insertar?palabra=hola">Insertar</a></li>
+<li>
+<form action="insertar" method="GET">
+	<input type="text" name="palabra">
+	Palabra en español <input type="submit" value="Guardar en Cloudant">
+</form>
+
+<!-- <a href="insertar?palabra=hola">Insertar</a> -->
+
+</li>
 </ul>
 </body>
 </html>

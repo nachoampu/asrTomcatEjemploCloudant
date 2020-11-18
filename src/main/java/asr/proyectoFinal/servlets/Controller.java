@@ -20,6 +20,8 @@ import javax.servlet.http.HttpServletResponse;
 
 import asr.proyectoFinal.dao.CloudantPalabraStore;
 import asr.proyectoFinal.dominio.Palabra;
+import asr.proyectoFinal.services.Traductor;
+
 
 /**
  * Servlet implementation class Controller
@@ -60,7 +62,7 @@ public class Controller extends HttpServlet {
 					}
 					else
 					{
-						palabra.setName(parametro);
+						palabra.setName(Traductor.translate(parametro, "es", "en", false));
 						store.persist(palabra);
 					    out.println(String.format("Almacenada la palabra: %s", palabra.getName()));			    	  
 					}
@@ -73,7 +75,8 @@ public class Controller extends HttpServlet {
 	/**
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
-	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException 
+	{
 		doGet(request, response);
 	}
 
