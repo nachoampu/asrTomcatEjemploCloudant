@@ -14,8 +14,9 @@
 <li><a href="listar">Listar</a></li>
 <li>
 <form action="insertar" method="GET">
+	Palabra en español 
 	<input type="text" name="palabra">
-	Palabra en español <input type="submit" value="Guardar en Cloudant">
+	<input type="submit" value="Guardar en Cloudant">
 </form>
 
 <!-- <a href="insertar?palabra=hola">Insertar</a> -->
