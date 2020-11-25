@@ -21,12 +21,15 @@ import javax.servlet.http.HttpServletResponse;
 import asr.proyectoFinal.dao.CloudantPalabraStore;
 import asr.proyectoFinal.dominio.Palabra;
 import asr.proyectoFinal.services.Traductor;
+import asr.proyectoFinal.services.ReproduceAudio;
+import asr.proyectoFinal.services.TextSpeech;
+
 
 
 /**
  * Servlet implementation class Controller
  */
-@WebServlet(urlPatterns = {"/listar", "/insertar", "/hablar"})
+@WebServlet(urlPatterns = {"/listar", "/insertar", "/hablar","/reproduce"})
 public class Controller extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
@@ -44,6 +47,16 @@ public class Controller extends HttpServlet {
 					  out.println("No hay DB");
 				else
 					out.println("Palabras en la BD Cloudant:<br />" + store.getAll());
+				break;
+				
+			case "/hablar":
+				TextSpeech.TexttoVoice();
+				out.println("Audio bien");
+				break;
+				
+			case "/reproduce":
+				ReproduceAudio.Reproduce();
+				out.println("Reproduce bien");
 				break;
 				
 			case "/insertar":
