@@ -14,16 +14,32 @@
 		<li><a href="listar">Listar</a></li>
 		<li>
 		<form action="insertar" method="GET">
-			Palabra en español 
-			<input type="text" name="palabra">
+			Almacenar en la base de datos.<br>
+			Se almacenara la traduccion del texto introducido.
+			<input type="text" name="palabra" style="overflow: auto hidden;">
 			<input type="submit" value="Guardar en Cloudant">
 		</form>
+		</li>
+		
+		<li>
+		<form action="hablar" method="GET">
+			Traductor(ES-EN)<br>
+			<input type="text" name="palabra" style="overflow: auto hidden;">
+			Escuchar pronunciacion<input type="checkbox" name="pr" value="true">
+			<input type="submit" value="Traducir">
+		</form>
+		</li>
+		
 		
 		<li><a href="hablar">Audio</a></li>
 		<li><a href="reproduce">reproduce</a></li>
 		
 		
-		<!-- <a href="insertar?palabra=hola">Insertar</a> -->
+		<!-- <a href="insertar?palabra=hola">Insertar</a> 
+			<textarea  
+			placeholder="Introducir texto" rows="5" 
+			name="palabra" style="overflow: auto hidden;" >
+			</textarea>-->
 	</ul>
 </body>
 </html>

@@ -47,17 +47,31 @@ public class Controller extends HttpServlet {
 					  out.println("No hay DB");
 				else
 					out.println("Palabras en la BD Cloudant:<br />" + store.getAll());
+				
+				out.println("<br>");
+				out.println("<A href=\"/asrTomcatEjemploCloudant/index.jsp\">Volver atras...</A>");
+
 				break;
 				
+				
 			case "/hablar":
-				TextSpeech.TexttoVoice();
-				out.println("Audio bien");
+				String parametro1 = request.getParameter("palabra");
+				String traduccion=Traductor.translate(parametro1, "es", "en", false);
+				//String checkbox = request.getParameter("pr");
+				if(request.getParameter("pr")!=null) {
+					TextSpeech.TexttoVoice(traduccion);
+				}
+				out.println("Traduccion :" + traduccion  );
+				out.println("<A href=\"/asrTomcatEjemploCloudant/index.jsp\">Volver atras...</A>");
 				break;
 				
 			case "/reproduce":
 				ReproduceAudio.Reproduce();
 				out.println("Reproduce bien");
+				out.println("<br>");
+				out.println("<A href=\"/asrTomcatEjemploCloudant/index.jsp\">Volver atras...</A>");
 				break;
+				
 				
 			case "/insertar":
 				Palabra palabra = new Palabra();

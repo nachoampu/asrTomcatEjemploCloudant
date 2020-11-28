@@ -21,7 +21,7 @@ import asr.proyectoFinal.services.ReproduceAudio;
 
 public class TextSpeech {
 
-	public static void TexttoVoice() {
+	public static void TexttoVoice( String palabra) {
 		
 		IamAuthenticator authenticator = new IamAuthenticator("JqD0aHwN49peFistPoYIJWoe7AHFwPBeJl0EEFZXkc_D");
 		TextToSpeech textToSpeech = new TextToSpeech(authenticator);
@@ -30,7 +30,7 @@ public class TextSpeech {
 		try {
 		  SynthesizeOptions synthesizeOptions =
 		    new SynthesizeOptions.Builder()
-		      .text("Hello world")
+		      .text(palabra)
 		      .accept("audio/wav")
 		      .voice("en-US_AllisonV3Voice")
 		      .build();
@@ -54,6 +54,6 @@ public class TextSpeech {
 		} catch (IOException e) {
 		  e.printStackTrace();
 		}
-		
+				
 	}
 }

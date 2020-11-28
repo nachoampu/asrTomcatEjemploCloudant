@@ -25,7 +25,7 @@ public class ReproduceAudio {
             Clip sonido = AudioSystem.getClip();
             
             // Se carga con un fichero wav
-            sonido.open(AudioSystem.getAudioInputStream(new File("C:\\Users\\iampu\\OneDrive\\Documentos\\eclipse\\hello_world.wav")));
+            sonido.open(AudioSystem.getAudioInputStream(new File("hello_world.wav")));
 
             // Comienza la reproducción
             sonido.start();
@@ -55,9 +55,11 @@ public class ReproduceAudio {
 
             // Comienza la reproducción
             sonido.start();
-            JOptionPane.showMessageDialog(null, "Click OK to stop music");            
-            //while (sonido.isRunning())
-            //   Thread.sleep(10000);
+            //JOptionPane.showMessageDialog(null, "Click OK to stop music");            
+            do {
+            	//Thread.sleep(1000);
+                sonido.drain();
+            }while (sonido.isRunning());
             
             // Se cierra el clip.
             sonido.close();
