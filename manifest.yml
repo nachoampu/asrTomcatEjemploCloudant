@@ -6,7 +6,7 @@ applications:
   memory: 640M
   instances: 1
   host: asrTomcatEjemploCloudantNacho1
-  domain: ng.mybluemix.net
+  domain: mybluemix.net
   #Buildpack de Tomcat 
   buildpack: java_buildpack
   #Buildpack de Liberty
