@@ -30,16 +30,17 @@
 		</form>
 		</li>
 		
-		
+		<!--		
 		<li><a href="hablar">Audio</a></li>
 		<li><a href="reproduce">reproduce</a></li>
 		
 		
-		<!-- <a href="insertar?palabra=hola">Insertar</a> 
+		 <a href="insertar?palabra=hola">Insertar</a> 
 			<textarea  
 			placeholder="Introducir texto" rows="5" 
 			name="palabra" style="overflow: auto hidden;" >
-			</textarea>-->
+			</textarea>	
+		-->
 	</ul>
 </body>
 </html>

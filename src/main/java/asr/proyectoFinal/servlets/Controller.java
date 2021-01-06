@@ -64,13 +64,14 @@ public class Controller extends HttpServlet {
 				out.println("Traduccion :" + traduccion  );
 				out.println("<A href=\"/asrTomcatEjemploCloudant/index.jsp\">Volver atras...</A>");
 				break;
-				
+			/*
 			case "/reproduce":
 				ReproduceAudio.Reproduce();
 				out.println("Reproduce bien");
 				out.println("<br>");
 				out.println("<A href=\"/asrTomcatEjemploCloudant/index.jsp\">Volver atras...</A>");
 				break;
+			*/
 				
 				
 			case "/insertar":
