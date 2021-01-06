@@ -24,9 +24,9 @@ public class Traductor
 			model="en-es";
 		
 		//Authenticator authenticator = new IamAuthenticator("sGBqIGkLecdsa4RdsA3imHp_lvb7MMlZNzdasq-PgkmCXdsf59P0");
-		Authenticator authenticator = new IamAuthenticator("WbC4PfsWyMEnjTpIG6aFmOGHchdeQFoG_okbNslACQXU");
+		Authenticator authenticator = new IamAuthenticator("c0ANS_pKy7_4KUj52L5PyCa0glj5faJXSqaE59zW3fuV");
 		LanguageTranslator languageTranslator = new LanguageTranslator("2020-11-11", authenticator);
-		languageTranslator.setServiceUrl("https://api.eu-gb.language-translator.watson.cloud.ibm.com/instances/7ff5df02-1b70-4dc1-8f15-e1c00196dd25");
+		languageTranslator.setServiceUrl("https://api.us-south.language-translator.watson.cloud.ibm.com/instances/a52169e5-ce90-4722-a79a-967e0ba34898");
 		
 		TranslateOptions translateOptions = new TranslateOptions.Builder()
 			.addText(palabra)
