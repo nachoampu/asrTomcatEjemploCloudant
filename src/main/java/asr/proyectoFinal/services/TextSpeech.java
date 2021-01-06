@@ -41,7 +41,7 @@ public class TextSpeech {
 
 		  ReproduceAudio.ReproduceArchivo(in);
 		  
-		  OutputStream out = new FileOutputStream("hello_world.wav");
+		  OutputStream out = new FileOutputStream("audio.wav");
 		  byte[] buffer = new byte[1024];
 		  int length;
 		  while ((length = in.read(buffer)) > 0) {
