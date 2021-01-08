@@ -25,7 +25,7 @@
 		<form action="hablar" method="GET">
 			Traductor(ES-EN)<br>
 			<input type="text" name="palabra" style="overflow: auto hidden;">
-			Escuchar pronunciacion<input type="checkbox" name="pr" value="true">
+			Se reproducira la traduccion
 			<input type="submit" value="Traducir">
 		</form>
 		</li>

@@ -58,9 +58,9 @@ public class Controller extends HttpServlet {
 				String parametro1 = request.getParameter("palabra");
 				String traduccion=Traductor.translate(parametro1, "es", "en", false);
 				//String checkbox = request.getParameter("pr");
-				if(request.getParameter("pr")!=null) {
+				//if(request.getParameter("pr")!=null) {
 					TextSpeech.TexttoVoice(traduccion);
-				}
+				//}
 				out.println("Traduccion :" + traduccion  );
 				out.println("<A href=\"/asrTomcatEjemploCloudant/index.jsp\">Volver atras...</A>");
 				break;
